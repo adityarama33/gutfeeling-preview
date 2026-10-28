@@ -150,7 +150,7 @@ a.shot:hover img{transform:translateY(-6px)}
 .snote{font:600 15px/1.35 var(--body);margin-top:12px;min-height:1.35em}
 .packs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-top:30px}
 .pk{display:grid;justify-items:center;text-align:center;gap:12px}
-.stack{position:relative;width:min(100%,250px);aspect-ratio:680/1330;--dir:1}
+.stack{position:relative;width:min(100%,250px);aspect-ratio:700/1177;--dir:1}
 .pk[data-pk="bbq"] .stack{--dir:-1}
 /* copies stand behind the front pack, each a step further back and towards the middle of the page */
 .stack img{position:absolute;left:0;bottom:0;width:100%;height:auto;transform-origin:50% 100%;transition:transform .45s var(--ease),opacity .35s,filter .35s;
@@ -357,7 +357,7 @@ transform:translate(calc(var(--i) * 4% * var(--dir)),calc(var(--i) * -6.5%)) sca
     <p class="allergen"><b>Allergens.</b> Contains soybean, peanut (groundnut). May contain gluten (wheat), sesame, tree nuts, celery, mustard.</p>
     <a class="more" href="peri-peri.html">Nutrition, ingredients and allergens →</a>
   </div>
-  <a class="shot d-only" href="peri-peri.html" aria-label="Peri Peri: nutrition, ingredients and allergens"><img src="img/pack-peri.webp" alt="A sealed pack of Gut Feeling Peri Peri, 43 g" width="680" height="1100" loading="lazy"></a>
+  <a class="shot d-only" href="peri-peri.html" aria-label="Peri Peri: nutrition, ingredients and allergens"><img src="img/pack-peri.webp" alt="An open pack of Gut Feeling Peri Peri, 43 g, with chips spilling out" width="1000" height="1300" loading="lazy"></a>
 </div></section>
 
 <section class="sec flav bbq" data-t="carona" aria-labelledby="t-bbq"><div class="wrap g">
@@ -386,7 +386,7 @@ transform:translate(calc(var(--i) * 4% * var(--dir)),calc(var(--i) * -6.5%)) sca
     <p class="allergen"><b>Allergens.</b> Contains soybean, peanut (groundnut), wheat (gluten), milk. May contain sesame, tree nuts, celery, mustard.</p>
     <a class="more" href="sweet-chilli-bbq.html">Nutrition, ingredients and allergens →</a>
   </div>
-  <a class="shot d-only" href="sweet-chilli-bbq.html" aria-label="Sweet Chilli BBQ: nutrition, ingredients and allergens"><img src="img/pack-bbq.webp" alt="A sealed pack of Gut Feeling Sweet Chilli BBQ, 44 g" width="680" height="1100" loading="lazy"></a>
+  <a class="shot d-only" href="sweet-chilli-bbq.html" aria-label="Sweet Chilli BBQ: nutrition, ingredients and allergens"><img src="img/pack-bbq.webp" alt="An open pack of Gut Feeling Sweet Chilli BBQ, 44 g, with chips spilling out" width="1000" height="1300" loading="lazy"></a>
 </div></section>
 
 <section class="sec box" data-t="ivory" id="boxes" aria-labelledby="t-box"><div class="wrap g">
@@ -434,13 +434,13 @@ transform:translate(calc(var(--i) * 4% * var(--dir)),calc(var(--i) * -6.5%)) sca
   </div>
   <div class="cands">
     <article class="cand a">
-      <div class="shot"><img src="img/pouch-ocean.webp" alt="A plain blue test pouch with a question-mark sticker" width="680" height="1100" loading="lazy"></div>
+      <div class="shot"><img src="img/pouch-ocean.webp" alt="A plain blue test pouch with a question-mark sticker" width="700" height="940" loading="lazy"></div>
       <h3>Masala Chaas</h3><p>Cool, tangy, a pinch of roasted jeera.</p>
       <div class="goal"><div class="tr"><i></i></div><p><b class="c">0</b> of 500 votes</p></div>
       <button class="vbtn" type="button" data-vote="a" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg><span class="burst" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="lbl">Vote</span></button>
     </article>
     <article class="cand b">
-      <div class="shot"><img src="img/pouch-apple.webp" alt="A plain green test pouch with a question-mark sticker" width="680" height="1100" loading="lazy"></div>
+      <div class="shot"><img src="img/pouch-apple.webp" alt="A plain green test pouch with a question-mark sticker" width="700" height="940" loading="lazy"></div>
       <h3>Lime &amp; Black Salt</h3><p>Sharp, salty, the nimbu soda of chips.</p>
       <div class="goal"><div class="tr"><i></i></div><p><b class="c">0</b> of 500 votes</p></div>
       <button class="vbtn" type="button" data-vote="b" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg><span class="burst" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="lbl">Vote</span></button>
@@ -565,7 +565,7 @@ transform:translate(calc(var(--i) * 4% * var(--dir)),calc(var(--i) * -6.5%)) sca
   // each flavour is its own number; the total is their sum. Size tiles and the total field just split a new total between them.
   var MAX=100,box={peri:1,bbq:1},DEPTH=4;
   $$('.pk').forEach(function(pk){var st=pk.querySelector('.stack');
-    for(var i=0;i<DEPTH;i++){var im=document.createElement('img');im.src='img/pack-'+pk.dataset.pk+'.webp';im.alt='';im.width=680;im.height=1100;im.loading='lazy';im.style.setProperty('--i',i);st.insertBefore(im,st.querySelector('.x'));}});
+    for(var i=0;i<DEPTH;i++){var im=document.createElement('img');im.src='img/pack-'+pk.dataset.pk+'-solo.webp';im.alt='';im.width=700;im.height=940;im.loading='lazy';im.style.setProperty('--i',i);st.insertBefore(im,st.querySelector('.x'));}});
   function num(v){v=parseInt(String(v).replace(/\D/g,''),10);return isNaN(v)?0:v}
   function setTotal(n){n=Math.min(MAX,Math.max(0,n));var t=box.peri+box.bbq,p=t?Math.round(n*box.peri/t):Math.ceil(n/2);box.peri=p;box.bbq=n-p;renderBox();}
   function setOne(k,v){var o=k==='peri'?'bbq':'peri';box[k]=Math.min(MAX-box[o],Math.max(0,v));}
