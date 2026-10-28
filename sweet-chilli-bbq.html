@@ -150,6 +150,8 @@ tr.i2 td:first-child{padding-left:28px}
   .top .wrap{width:100%}
   .top .g{grid-template-columns:repeat(12,1fr);column-gap:24px;align-items:center}
   .top .copy>*{grid-column:8/13}
+  /* the name fits its five columns: SWEET is about 3.3 em wide */
+  .name{font-size:min(142px,calc((100vw - 80px) * .118))}
   .top .shot{grid-column:1/7;grid-row:1/span 9;width:min(100%,460px);margin:0 auto;align-self:center}
   .info .g{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;align-items:start}
   .info .intro{grid-column:1/13}
@@ -158,7 +160,7 @@ tr.i2 td:first-child{padding-left:28px}
   .next .g{grid-template-columns:1fr auto}
 }
 @media (max-width:699px){.know li{grid-template-columns:112px 1fr}}
-@media (max-width:359px){.facts b{font-size:24px}.facts li+li{padding-left:8px}.know li{grid-template-columns:110px 1fr}td+td,th+th{padding-left:6px}table{font-size:14px}}
+@media (max-width:359px){.facts b{font-size:24px}.facts li+li{padding-left:8px}.know li{grid-template-columns:110px 1fr}td+td,th+th{padding-left:6px}table{font-size:13px}.label{padding:12px 10px 10px}th{font-size:10.5px}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 </style></head>
 <body data-k="bbq">
