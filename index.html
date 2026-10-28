@@ -110,6 +110,11 @@ background:radial-gradient(closest-side,rgba(255,244,226,.30),rgba(255,244,226,.
 .step span{font:800 15px/1 var(--body);white-space:nowrap;font-variant-numeric:tabular-nums}
 .allergen{font:400 14px/1.45 var(--body);margin-top:18px;max-width:46ch}
 .allergen b{font-weight:800}
+.more{display:inline-flex;align-items:center;min-height:44px;margin-top:8px;font:800 14px/1.2 var(--body);text-transform:uppercase;letter-spacing:.03em;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:2px}
+.name .pl{text-decoration:none;color:inherit}
+a.shot{text-decoration:none}
+a.shot img{transition:transform .4s var(--ease)}
+a.shot:hover img{transform:translateY(-6px)}
 
 /* visitors' hearts: this flavour against the other one */
 .fav{margin-top:26px;padding:18px 18px 16px;border-radius:18px;background:color-mix(in srgb,currentColor 9%,transparent)}
@@ -329,7 +334,7 @@ transform:translate(calc(var(--i) * 4% * var(--dir)),calc(var(--i) * -6.5%)) sca
 <section class="sec flav peri" data-t="red" id="flavours" aria-labelledby="t-peri"><div class="wrap g">
   <div class="copy">
     <p class="kicker">Flavour 01 of 02</p>
-    <h2 class="name fit" id="t-peri" data-max="190"><span>Peri Peri</span></h2>
+    <h2 class="name fit" id="t-peri" data-max="190"><a class="pl" href="peri-peri.html"><span>Peri Peri</span></a></h2>
     <div class="shot m-only"></div>
     <p class="taste">Chilli first, then a sour tang. Thin enough to hear.</p>
     <dl class="meters">
@@ -350,14 +355,15 @@ transform:translate(calc(var(--i) * 4% * var(--dir)),calc(var(--i) * -6.5%)) sca
       <p class="fav-note">The number of people who liked each flavour when they visited this site. One heart per person per flavour.</p>
     </div>
     <p class="allergen"><b>Allergens.</b> Contains soybean, peanut (groundnut). May contain gluten (wheat), sesame, tree nuts, celery, mustard.</p>
+    <a class="more" href="peri-peri.html">Nutrition, ingredients and allergens →</a>
   </div>
-  <div class="shot d-only"><img src="img/pack-peri.webp" alt="A sealed pack of Gut Feeling Peri Peri, 43 g" width="680" height="1100" loading="lazy"></div>
+  <a class="shot d-only" href="peri-peri.html" aria-label="Peri Peri: nutrition, ingredients and allergens"><img src="img/pack-peri.webp" alt="A sealed pack of Gut Feeling Peri Peri, 43 g" width="680" height="1100" loading="lazy"></a>
 </div></section>
 
 <section class="sec flav bbq" data-t="carona" aria-labelledby="t-bbq"><div class="wrap g">
   <div class="copy">
     <p class="kicker">Flavour 02 of 02</p>
-    <h2 class="name fit" id="t-bbq" data-max="160"><span>Sweet Chilli</span><span>BBQ</span></h2>
+    <h2 class="name fit" id="t-bbq" data-max="160"><a class="pl" href="sweet-chilli-bbq.html"><span>Sweet Chilli</span><span>BBQ</span></a></h2>
     <div class="shot m-only"></div>
     <p class="taste">Sweet first, then a little heat, then something cheesy.</p>
     <dl class="meters">
@@ -378,8 +384,9 @@ transform:translate(calc(var(--i) * 4% * var(--dir)),calc(var(--i) * -6.5%)) sca
       <p class="fav-note">The number of people who liked each flavour when they visited this site. One heart per person per flavour.</p>
     </div>
     <p class="allergen"><b>Allergens.</b> Contains soybean, peanut (groundnut), wheat (gluten), milk. May contain sesame, tree nuts, celery, mustard.</p>
+    <a class="more" href="sweet-chilli-bbq.html">Nutrition, ingredients and allergens →</a>
   </div>
-  <div class="shot d-only"><img src="img/pack-bbq.webp" alt="A sealed pack of Gut Feeling Sweet Chilli BBQ, 44 g" width="680" height="1100" loading="lazy"></div>
+  <a class="shot d-only" href="sweet-chilli-bbq.html" aria-label="Sweet Chilli BBQ: nutrition, ingredients and allergens"><img src="img/pack-bbq.webp" alt="A sealed pack of Gut Feeling Sweet Chilli BBQ, 44 g" width="680" height="1100" loading="lazy"></a>
 </div></section>
 
 <section class="sec box" data-t="ivory" id="boxes" aria-labelledby="t-box"><div class="wrap g">
@@ -474,12 +481,12 @@ transform:translate(calc(var(--i) * 4% * var(--dir)),calc(var(--i) * -6.5%)) sca
 <footer class="foot" data-t="lic"><img class="rings" src="rings.svg" alt="" width="847" height="785"><div class="wrap">
   <div class="end"><img class="logo" src="logo.svg" alt="Gut Feeling" width="240" height="60"></div>
   <div class="cols">
-    <div><h4>Shop</h4><ul><li><a href="#flavours">Peri Peri</a></li><li><a href="#t-bbq">Sweet Chilli BBQ</a></li><li><a href="#boxes">Build a box</a></li></ul></div>
+    <div><h4>Shop</h4><ul><li><a href="peri-peri.html">Peri Peri</a></li><li><a href="sweet-chilli-bbq.html">Sweet Chilli BBQ</a></li><li><a href="#boxes">Build a box</a></li></ul></div>
     <div><h4>Help</h4><ul><li><a href="#top">Shipping</a></li><li><a href="#top">Returns</a></li><li><a href="#top">Privacy</a></li></ul></div>
     <div><h4>Follow</h4><ul><li><a href="https://www.instagram.com/gutfeeling.foods/" target="_blank" rel="noopener">Instagram</a></li></ul></div>
     <div><h4>Questions or bulk orders</h4><ul><li><a href="mailto:gutfeelingfoods.in@gmail.com">gutfeelingfoods.in@gmail.com</a></li></ul></div>
   </div>
-  <p class="legal">FSSAI Lic. No. 21526013001107 · PLONQ Foods Private Limited, Mumbai · GSTIN 27AAQCP9989G1ZB</p>
+  <p class="legal">FSSAI Reg. No. 21526013001107 · PLONQ Foods Private Limited, Mumbai · GSTIN 27AAQCP9989G1ZB</p>
 </div></footer>
 </main>
 
@@ -487,7 +494,7 @@ transform:translate(calc(var(--i) * 4% * var(--dir)),calc(var(--i) * -6.5%)) sca
 
 <script>
 (function(){
-  var q={peri:0,bbq:0},TARGET=500,SVGNS='http://www.w3.org/2000/svg';
+  var q=(function(){try{var c=JSON.parse(localStorage.getItem('gf-cart'))||{};return {peri:+c.peri||0,bbq:+c.bbq||0}}catch(e){return {peri:0,bbq:0}}})(),TARGET=500,SVGNS='http://www.w3.org/2000/svg';
   var store={get:function(k){try{return localStorage.getItem(k)}catch(e){return null}},set:function(k,v){try{v==null?localStorage.removeItem(k):localStorage.setItem(k,v)}catch(e){}}};
   function $(s){return document.querySelector(s)}
   function $$(s){return [].slice.call(document.querySelectorAll(s))}
@@ -542,7 +549,7 @@ transform:translate(calc(var(--i) * 4% * var(--dir)),calc(var(--i) * -6.5%)) sca
     layout();word.classList.remove('in');void word.getBoundingClientRect();word.classList.add('in');}
 
   /* ---------- flavour names fill their column ---------- */
-  function fitNames(){$$('.fit').forEach(function(h){var spans=[].map.call(h.children,function(s){return s.textContent});var mt=metrics(spans);
+  function fitNames(){$$('.fit').forEach(function(h){var spans=[].map.call(h.querySelectorAll('span'),function(s){return s.textContent});var mt=metrics(spans);
     var W=h.parentNode.clientWidth,fs=Math.min(W/(mt.w/100)*.99,+h.dataset.max||200);h.style.setProperty('--nfs',px(fs)+'px');});}
 
   /* ---------- cart ---------- */
@@ -550,7 +557,8 @@ transform:translate(calc(var(--i) * 4% * var(--dir)),calc(var(--i) * -6.5%)) sca
     $$('[data-k]').forEach(function(c){var k=c.dataset.k;c.classList.toggle('has',q[k]>0);c.querySelector('.step span').textContent=q[k]+' in cart';});
     var b=$('.bag b');b.textContent=n||'';b.classList.remove('pop');void b.offsetWidth;if(n)b.classList.add('pop');
     $('#barsum').textContent=n+(n==1?' pack':' packs')+' · ₹'+(n*99).toLocaleString('en-IN');
-    $('#bar').classList.toggle('on',n>0);document.body.style.paddingBottom=n>0?'90px':'';}
+    $('#bar').classList.toggle('on',n>0);document.body.style.paddingBottom=n>0?'90px':'';
+    try{localStorage.setItem('gf-cart',JSON.stringify(q))}catch(e){}}
 
   /* ---------- box builder ---------- */
   var NOTES={2:'One of each. Start here.',4:'Two for work, two for home.',6:'One a day. Sunday off.',12:'For when people come over.'};
