@@ -305,9 +305,9 @@ transform:translate(calc(var(--i) * 4% * var(--dir)),calc(var(--i) * -6.5%)) sca
 
 <section class="hero" id="top" aria-label="Gut Feeling fermented soybean chips">
   <div class="stage" id="stage">
-    <picture><source media="(min-width:700px) and (min-aspect-ratio:1/1)" srcset="img/hero-wide-bg.jpg"><img class="bg" id="heroBg" src="img/hero-peri-bg.jpg" alt="An open pack of Peri Peri chips on a red-oxide floor in hard afternoon sun" width="1080" height="2280" fetchpriority="high"></picture>
+    <picture><source media="(min-width:700px) and (min-aspect-ratio:1/1)" srcset="img/hero-wide-bg.jpg"><img class="bg" id="heroBg" src="img/hero-peri-bg.jpg" alt="An open pack of Peri Peri chips on a red-oxide floor in hard afternoon sun" width="1080" height="1935" fetchpriority="high"></picture>
     <svg class="word" id="heroWord" aria-hidden="true"></svg>
-    <picture><source media="(min-width:700px) and (min-aspect-ratio:1/1)" srcset="img/hero-wide-fg.webp"><img class="fg" id="heroFg" src="img/hero-peri-fg.webp" alt="" width="1080" height="2280"></picture>
+    <picture><source media="(min-width:700px) and (min-aspect-ratio:1/1)" srcset="img/hero-wide-fg.webp"><img class="fg" id="heroFg" src="img/hero-peri-fg.webp" alt="" width="1080" height="1935"></picture>
   </div>
   <div class="panel" id="panel"><div class="wrap">
     <h1>Fermented soybean chips. <em>₹99.</em></h1>
@@ -508,8 +508,8 @@ transform:translate(calc(var(--i) * 4% * var(--dir)),calc(var(--i) * -6.5%)) sca
   $$('.m-only').forEach(function(s){s.style.display='none'});
 
   /* ---------- hero ---------- */
-  // Pack positions measured from each render's pack layer (image pixels): top of the highest pack, bottom of the pack, left edge of the packs.
-  var IMG={phone:{iw:1080,ih:2280,top:905,bottom:1900,left:78},wide:{iw:2000,ih:1131,top:270,bottom:1065,left:702}};
+  // Pack positions measured from each hero image (image pixels), per flavour on phones: top of the highest pack, bottom of the pack, left edge of the packs.
+  var IMG={peri:{iw:1080,ih:1935,top:871,bottom:1655,left:90},bbq:{iw:1080,ih:1935,top:916,bottom:1852,left:206},wide:{iw:2240,ih:1116,top:402,bottom:999,left:796}};
   var F={peri:{lines:['Peri','Peri'],alt:'An open pack of Peri Peri chips on a red-oxide floor in hard afternoon sun'},
          bbq:{lines:['Sweet','Chilli'],alt:'An open pack of Sweet Chilli BBQ chips on a red-oxide floor in hard afternoon sun'}};
   var hero=$('.hero'),stage=$('#stage'),bg=$('#heroBg'),fg=$('#heroFg'),word=$('#heroWord'),panel=$('#panel'),buy=$('#heroBuy');
@@ -521,7 +521,7 @@ transform:translate(calc(var(--i) * 4% * var(--dir)),calc(var(--i) * -6.5%)) sca
     var cap=ctx.measureText('H').actualBoundingBoxAscent||72;return {w:w,cap:cap};}
   function px(v){return Math.round(v*10)/10}
   function layout(){
-    var wide=wideMQ.matches,m=wide?IMG.wide:IMG.phone,W=stage.clientWidth,hdr=64,s,offX=0,offY=0,H;
+    var wide=wideMQ.matches,m=wide?IMG.wide:IMG[flav],W=stage.clientWidth,hdr=64,s,offX=0,offY=0,H;
     var gl=parseFloat(getComputedStyle(panel.querySelector('.wrap')).paddingLeft)||20;
     if(wide){
       hero.classList.add('over');H=stage.clientHeight;s=Math.max(W/m.iw,H/m.ih);offX=(W-m.iw*s)/2;offY=(H-m.ih*s)/2;
